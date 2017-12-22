@@ -1,0 +1,27 @@
+package by.htp.univer.bean;
+
+public class Group {
+	
+	private String name;
+	private Student [] students;
+	
+	public void setGroup (String newName)
+	{
+		name = newName;
+	}
+	
+	public String getGroup ()
+	{
+		return name;
+	}
+	
+	public Student getArray(int index)
+	{
+		return students[index];
+	}	
+	
+	public void setArray (int index, Student value)
+	{
+		students[index]= value;
+	}	
+}
