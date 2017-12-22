@@ -1,0 +1,40 @@
+package by.htp.univer.runner;
+
+import by.htp.univer.bean.Student;
+import by.htp.univer.bean.Group;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+
+		float avg = 0;
+		float length = 0;
+
+		Student student0 = new Student("Barry", "Allen", 30);
+		Student student1 = new Student("Peter", "Parker", 20);
+		Student student2 = new Student("Steven", "Rogers", 18);
+
+		int age0 = student0.getAge();
+
+		Group group = new Group();
+		group.setGroup("HTP");
+		String mygroup = group.getGroup();
+
+		Student[] students = new Student[3];
+		students[0] = student0;
+		students[1] = student1;
+		students[2] = student2;
+
+		for (int i = 0; i < 3; i++) {
+			int age = students[i].getAge();
+			System.out.println(age);
+			avg = avg + age;
+			length = length + 1;
+		}
+		;
+
+		float avAge = avg / length;
+		System.out.println("average age is " + avAge);
+
+	}
+}
